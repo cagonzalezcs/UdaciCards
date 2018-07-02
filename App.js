@@ -9,12 +9,13 @@ import {
     createStackNavigator } from 'react-navigation'
 import { Constants } from 'expo'
 import  { Ionicons } from '@expo/vector-icons'
-import { orange, yellow, white } from './utils/colors'
 import DeckList from './components/DeckList'
 import AddDeck from './components/AddDeck'
 import DeckItem from './components/DeckItem'
 import DeckQuiz from './components/DeckQuiz'
 import AddNewCard from './components/AddNewCard'
+import { orange, yellow, white } from './utils/colors'
+import { setLocalNotification } from './utils/notifications'
 
 
 function UdaciCardsStatusBar({ backgroundColor, ...props }) {
@@ -118,7 +119,6 @@ const MainNavigator = createStackNavigator({
             headerStyle: {
                 backgroundColor: orange
             },
-            headerForceInset: () => { 0 },
         }
     },
     DeckQuiz: {
@@ -128,7 +128,6 @@ const MainNavigator = createStackNavigator({
             headerStyle: {
                 backgroundColor: orange
             },
-            headerForceInset: () => { 0 },
         }
     },
     AddNewCard: {
@@ -139,12 +138,14 @@ const MainNavigator = createStackNavigator({
             headerStyle: {
                 backgroundColor: orange
             },
-            headerForceInset: () => { 0 },
         }
     },
 })
 
 export default class App extends Component {
+    componentDidMount() {
+        setLocalNotification()
+    }
     render() {
         return (
             <View style={{flex: 1}}>

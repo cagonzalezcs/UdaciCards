@@ -23,10 +23,18 @@ class AddNewCard extends Component  {
 		}))
 	}
 	submitNewCard = ( title ) => {
+		newQuestion = this.state.question
+		newAnswer = this.state.answer
+
 		const content = {
-			question: this.state.question,
-			answer: this.state.answer
+			question: newQuestion,
+			answer: newAnswer
 		}
+
+		if(!newQuestion || !newAnswer) {
+			return alert('Please Fill Out Both the Question and Answer')
+		}
+
 		return addNewCard( title, content )
 			.then( () => this.viewDeckItem( this.state.title, content ))
 	}
@@ -34,7 +42,9 @@ class AddNewCard extends Component  {
 		const { navigate, dispatch } = this.props.navigation
 		const resetAction = StackActions.reset({
 			index: 0,
-			actions: [NavigationActions.navigate({ routeName: 'Home' })]
+			actions: [
+				NavigationActions.navigate({ routeName: 'Home', params: { item }}),
+			]
 		})
 		dispatch(resetAction)
 		navigate('DeckItem', { item })

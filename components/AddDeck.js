@@ -17,6 +17,9 @@ class AddDeck extends Component {
 		inputText: ''
 	}
 	submitNewDeck = () => {
+		if( !this.state.inputText ) {
+			return alert('Please Enter a Title for Your Deck')
+		}
 		return addNewDeck( this.state.inputText )
 			.then( this.viewDeckItem( this.state.inputText) )
 	}
@@ -29,7 +32,7 @@ class AddDeck extends Component {
 			],
 		})
 		dispatch( resetAction )
-		navigate( 'Deck Item', { item })
+		navigate( 'DeckItem', { item })
 	}
 	handleTextChange = (inputText) => {
 		this.setState( () => ({
