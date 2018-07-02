@@ -5,13 +5,13 @@ Completed project for Udacity's React Fundamentals course. Project has been comp
 To Launch Application in Local Enviornment
  * Clone this Respository
   `https://github.com/cagonzalezcs/UdaciCards.git`
-  * Change Directory into Main Project Folder
+ * Change Directory into Main Project Folder
     * `cd UdaciCards`
-  * Install all dependencies of the project
+ * Install all dependencies of the project
     * `yarn install`
-  * Start the Project
-    * `yarn start`
+ * Start the Project
+ 	* `yarn start`
 
 This project was bootstrapped using `create-react-native-app` and uses `expo` to develop in a local environment. For more information on these tools, view the links below:
-	* `https://github.com/react-community/create-react-native-app`
-	* `https://docs.expo.io/versions/latest/`
+ * `https://github.com/react-community/create-react-native-app`
+ * `https://docs.expo.io/versions/latest/`
