@@ -44,7 +44,9 @@ class DeckQuiz extends Component  {
 		currentCardNum++;
 
 		if(currentCardNum < deck.questions.length) {
-			this.setState(() => ({ currentCardNum: currentCardNum }))
+			this.setState(() => ({
+				currentCardNum: currentCardNum,
+				viewAnswer: false }))
 		} else {
 			this.setState(() => ({ quizFinished: true }))
 			clearLocalNotification()
@@ -60,6 +62,7 @@ class DeckQuiz extends Component  {
 	}
 	restartQuiz = () => {
 		this.setState(() => ({
+			viewAnswer: false,
 			quizFinished: false,
 			counter:0,
 			currentCardNum: 0
