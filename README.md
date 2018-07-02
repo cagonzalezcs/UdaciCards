@@ -15,3 +15,5 @@ To Launch Application in Local Enviornment
 This project was bootstrapped using `create-react-native-app` and uses `expo` to develop in a local environment. For more information on these tools, view the links below:
  * `https://github.com/react-community/create-react-native-app`
  * `https://docs.expo.io/versions/latest/`
+
+This project has been tested using `expo` on an emulated iPhoneX using iOS v11.4 and an emulated Pixel 2 XL using Andriod v9.
