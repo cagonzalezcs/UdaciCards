@@ -4,7 +4,7 @@ Completed project for Udacity's React Fundamentals course. Project has been comp
 
 To Launch Application in Local Enviornment
  * Clone this Respository
-  `https://github.com/cagonzalezcs/UdaciCards.git`
+	* `https://github.com/cagonzalezcs/UdaciCards.git`
  * Change Directory into Main Project Folder
     * `cd UdaciCards`
  * Install all dependencies of the project
